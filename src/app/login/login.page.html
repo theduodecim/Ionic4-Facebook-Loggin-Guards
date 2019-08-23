@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button [disabled]="logged" (click)="login()">Login In</ion-button>
+
+
+  <ion-card *ngIf="logged">
+    <span>Already logged in to the app</span>
+    <br>
+    <a style="pointer: cursor" [routerLink]="'/home'">Home Page</a>
+  </ion-card>
+
+</ion-content>
